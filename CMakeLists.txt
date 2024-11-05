@@ -41,7 +41,7 @@ find_package(Threads REQUIRED)
 target_link_libraries(trojan ${CMAKE_THREAD_LIBS_INIT})
 cmake_print_variables(CMAKE_THREAD_LIBS_INIT)
 
-find_package(Boost REQUIRED COMPONENTS system program_options)
+find_package(Boost CONFIG)
 include_directories(${Boost_INCLUDE_DIR})
 target_link_libraries(trojan ${Boost_LIBRARIES})
 if(MSVC)
