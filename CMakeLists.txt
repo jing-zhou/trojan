@@ -41,6 +41,7 @@ find_package(Threads REQUIRED)
 target_link_libraries(trojan ${CMAKE_THREAD_LIBS_INIT})
 cmake_print_variables(CMAKE_THREAD_LIBS_INIT)
 
+cmake_policy(SET CMP0167 NEW)
 find_package(Boost REQUIRED COMPONENTS system program_options)
 include_directories(${Boost_INCLUDE_DIR})
 target_link_libraries(trojan ${Boost_LIBRARIES})
